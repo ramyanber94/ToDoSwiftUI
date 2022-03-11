@@ -9,12 +9,25 @@ import SwiftUI
 
 @main
 struct CalendarApp: App {
-    let persistenceController = PersistenceController.shared
-
+    @StateObject var core = CoreDataService()
+    @State private var showLaunchScreen: Bool = true
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationView {
+                VStack {
+                    if showLaunchScreen {
+                        LaunchView(showLaunch: $showLaunchScreen)
+                            .navigationBarHidden(true)
+                            .transition(.move(edge: .leading))
+                    } else {
+                        LoginView()
+                            .navigationBarHidden(true)
+                            .environmentObject(core)
+                    }
+                }
+            }
+            .preferredColorScheme(.dark)
         }
     }
 }
