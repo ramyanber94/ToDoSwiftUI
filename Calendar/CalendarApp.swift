@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct CalendarApp: App {
     @StateObject var core = CoreDataService()
+    @StateObject var member = UserController()
     @State private var showLaunchScreen: Bool = true
     
     var body: some Scene {
@@ -24,6 +25,7 @@ struct CalendarApp: App {
                         LoginView()
                             .navigationBarHidden(true)
                             .environmentObject(core)
+                            .environmentObject(member)
                     }
                 }
             }

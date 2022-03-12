@@ -15,23 +15,23 @@
 		2DC7CFFC27D53CE700BF4802 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7CFFB27D53CE700BF4802 /* LaunchView.swift */; };
 		2DC7CFFE27D53D6000BF4802 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7CFFD27D53D6000BF4802 /* LoginView.swift */; };
 		2DC7D00127D541D100BF4802 /* ScaleFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7D00027D541D100BF4802 /* ScaleFactor.swift */; };
-		2DC7D00527D550D000BF4802 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7D00427D550D000BF4802 /* CustomTextField.swift */; };
 		2DC7D00727D5674700BF4802 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7D00627D5674700BF4802 /* CustomButton.swift */; };
 		2DC7D00A27D56C7A00BF4802 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7D00927D56C7A00BF4802 /* Validator.swift */; };
 		2DC7D01027D5769400BF4802 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7D00F27D5769400BF4802 /* DismissingKeyboard.swift */; };
-		2DC9809827DB36CC00D3BFDB /* AddToDoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9809727DB36CC00D3BFDB /* AddToDoButton.swift */; };
+		2DC9809827DB36CC00D3BFDB /* LinearStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9809727DB36CC00D3BFDB /* LinearStyle.swift */; };
 		2DC9809A27DB394A00D3BFDB /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9809927DB394A00D3BFDB /* ToDo.swift */; };
 		2DC9809C27DB3C1800D3BFDB /* AddNewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9809B27DB3C1800D3BFDB /* AddNewToDoView.swift */; };
 		2DC9809E27DB522000D3BFDB /* MenuSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9809D27DB522000D3BFDB /* MenuSelector.swift */; };
 		2DC980A127DB656000D3BFDB /* PickEmoji in Frameworks */ = {isa = PBXBuildFile; productRef = 2DC980A027DB656000D3BFDB /* PickEmoji */; };
+		2DCD3BCF27DBB9AF00A12410 /* DatePickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD3BCE27DBB9AF00A12410 /* DatePickers.swift */; };
+		2DCD3BD227DBC34700A12410 /* HalfModal in Frameworks */ = {isa = PBXBuildFile; productRef = 2DCD3BD127DBC34700A12410 /* HalfModal */; };
+		2DCD3BD427DBC5B000A12410 /* PickAnyEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD3BD327DBC5B000A12410 /* PickAnyEmoji.swift */; };
+		2DCD3BD627DBF0FC00A12410 /* TimePickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD3BD527DBF0FC00A12410 /* TimePickers.swift */; };
+		2DD5DDB127DC0FE600A0D27C /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD5DDB027DC0FE600A0D27C /* UserController.swift */; };
+		2DE3524A27DC81F7007A884F /* CoreStore in Frameworks */ = {isa = PBXBuildFile; productRef = 2DE3524927DC81F7007A884F /* CoreStore */; };
 		2DEC8A6827DAA6440020DB73 /* ValidationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A6727DAA6440020DB73 /* ValidationMessage.swift */; };
-		2DEC8A6A27DAA8A80020DB73 /* TogglePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A6927DAA8A80020DB73 /* TogglePassword.swift */; };
-		2DEC8A6D27DABA020020DB73 /* LoginHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A6C27DABA020020DB73 /* LoginHeader.swift */; };
-		2DEC8A6F27DABAD80020DB73 /* LoginTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A6E27DABAD80020DB73 /* LoginTextFields.swift */; };
-		2DEC8A7227DABEB40020DB73 /* LoginButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A7127DABEB40020DB73 /* LoginButtons.swift */; };
-		2DEC8A7627DAC7970020DB73 /* RegistrationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A7527DAC7970020DB73 /* RegistrationHeader.swift */; };
+		2DEC8A6D27DABA020020DB73 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A6C27DABA020020DB73 /* CustomHeader.swift */; };
 		2DEC8A7927DACE8F0020DB73 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A7827DACE8F0020DB73 /* Member.swift */; };
-		2DEC8A7B27DAE2EC0020DB73 /* RegistrationTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A7A27DAE2EC0020DB73 /* RegistrationTextFields.swift */; };
 		2DEC8A7F27DAE85D0020DB73 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A7E27DAE85D0020DB73 /* RegistrationView.swift */; };
 		2DEC8A8327DAF1EC0020DB73 /* ToDoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A8227DAF1EC0020DB73 /* ToDoHeader.swift */; };
 		2DEC8A8527DAF66D0020DB73 /* ToDoCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A8427DAF66D0020DB73 /* ToDoCards.swift */; };
@@ -49,22 +49,20 @@
 		2DC7CFFB27D53CE700BF4802 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		2DC7CFFD27D53D6000BF4802 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2DC7D00027D541D100BF4802 /* ScaleFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleFactor.swift; sourceTree = "<group>"; };
-		2DC7D00427D550D000BF4802 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2DC7D00627D5674700BF4802 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2DC7D00927D56C7A00BF4802 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		2DC7D00F27D5769400BF4802 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
-		2DC9809727DB36CC00D3BFDB /* AddToDoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoButton.swift; sourceTree = "<group>"; };
+		2DC9809727DB36CC00D3BFDB /* LinearStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearStyle.swift; sourceTree = "<group>"; };
 		2DC9809927DB394A00D3BFDB /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		2DC9809B27DB3C1800D3BFDB /* AddNewToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDoView.swift; sourceTree = "<group>"; };
 		2DC9809D27DB522000D3BFDB /* MenuSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelector.swift; sourceTree = "<group>"; };
+		2DCD3BCE27DBB9AF00A12410 /* DatePickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickers.swift; sourceTree = "<group>"; };
+		2DCD3BD327DBC5B000A12410 /* PickAnyEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAnyEmoji.swift; sourceTree = "<group>"; };
+		2DCD3BD527DBF0FC00A12410 /* TimePickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickers.swift; sourceTree = "<group>"; };
+		2DD5DDB027DC0FE600A0D27C /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		2DEC8A6727DAA6440020DB73 /* ValidationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationMessage.swift; sourceTree = "<group>"; };
-		2DEC8A6927DAA8A80020DB73 /* TogglePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglePassword.swift; sourceTree = "<group>"; };
-		2DEC8A6C27DABA020020DB73 /* LoginHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeader.swift; sourceTree = "<group>"; };
-		2DEC8A6E27DABAD80020DB73 /* LoginTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFields.swift; sourceTree = "<group>"; };
-		2DEC8A7127DABEB40020DB73 /* LoginButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtons.swift; sourceTree = "<group>"; };
-		2DEC8A7527DAC7970020DB73 /* RegistrationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationHeader.swift; sourceTree = "<group>"; };
+		2DEC8A6C27DABA020020DB73 /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 		2DEC8A7827DACE8F0020DB73 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		2DEC8A7A27DAE2EC0020DB73 /* RegistrationTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTextFields.swift; sourceTree = "<group>"; };
 		2DEC8A7E27DAE85D0020DB73 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		2DEC8A8227DAF1EC0020DB73 /* ToDoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoHeader.swift; sourceTree = "<group>"; };
 		2DEC8A8427DAF66D0020DB73 /* ToDoCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCards.swift; sourceTree = "<group>"; };
@@ -78,6 +76,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DC980A127DB656000D3BFDB /* PickEmoji in Frameworks */,
+				2DE3524A27DC81F7007A884F /* CoreStore in Frameworks */,
+				2DCD3BD227DBC34700A12410 /* HalfModal in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +103,7 @@
 		2DC7CFE327D53A1C00BF4802 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				2DD5DDAF27DC0FCD00A0D27C /* Controllers */,
 				2DC7D00827D56C6800BF4802 /* Helper */,
 				2DC7CFFF27D541BE00BF4802 /* Models */,
 				2DC7CFFA27D53CC800BF4802 /* Views */,
@@ -134,6 +135,12 @@
 		2DC7CFFA27D53CC800BF4802 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2DEC8A7E27DAE85D0020DB73 /* RegistrationView.swift */,
+				2DC7CFFD27D53D6000BF4802 /* LoginView.swift */,
+				2DC7CFFB27D53CE700BF4802 /* LaunchView.swift */,
+				2DEC8A8827DB161C0020DB73 /* ToDoView.swift */,
+				2DC9809B27DB3C1800D3BFDB /* AddNewToDoView.swift */,
+				2DEC8A8127DAF1A60020DB73 /* ToDo */,
 				2DC7D00327D5509A00BF4802 /* Components */,
 			);
 			path = Views;
@@ -153,14 +160,10 @@
 		2DC7D00327D5509A00BF4802 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2DEC8A8127DAF1A60020DB73 /* ToDo */,
-				2DEC8A7427DAC74C0020DB73 /* Registration */,
-				2DEC8A6B27DAB9990020DB73 /* Login */,
 				2DC7D00627D5674700BF4802 /* CustomButton.swift */,
+				2DC9809727DB36CC00D3BFDB /* LinearStyle.swift */,
+				2DEC8A6C27DABA020020DB73 /* CustomHeader.swift */,
 				2DEC8A6727DAA6440020DB73 /* ValidationMessage.swift */,
-				2DC7D00427D550D000BF4802 /* CustomTextField.swift */,
-				2DC7CFFB27D53CE700BF4802 /* LaunchView.swift */,
-				2DEC8A6927DAA8A80020DB73 /* TogglePassword.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -173,49 +176,18 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		2DEC8A6B27DAB9990020DB73 /* Login */ = {
+		2DD5DDAF27DC0FCD00A0D27C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2DEC8A7327DAC7170020DB73 /* Childs */,
-				2DC7CFFD27D53D6000BF4802 /* LoginView.swift */,
+				2DD5DDB027DC0FE600A0D27C /* UserController.swift */,
 			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		2DEC8A7327DAC7170020DB73 /* Childs */ = {
-			isa = PBXGroup;
-			children = (
-				2DEC8A6C27DABA020020DB73 /* LoginHeader.swift */,
-				2DEC8A6E27DABAD80020DB73 /* LoginTextFields.swift */,
-				2DEC8A7127DABEB40020DB73 /* LoginButtons.swift */,
-			);
-			path = Childs;
-			sourceTree = "<group>";
-		};
-		2DEC8A7427DAC74C0020DB73 /* Registration */ = {
-			isa = PBXGroup;
-			children = (
-				2DEC8A7727DAC7A80020DB73 /* Childs */,
-				2DEC8A7E27DAE85D0020DB73 /* RegistrationView.swift */,
-			);
-			path = Registration;
-			sourceTree = "<group>";
-		};
-		2DEC8A7727DAC7A80020DB73 /* Childs */ = {
-			isa = PBXGroup;
-			children = (
-				2DEC8A7527DAC7970020DB73 /* RegistrationHeader.swift */,
-				2DEC8A7A27DAE2EC0020DB73 /* RegistrationTextFields.swift */,
-			);
-			path = Childs;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		2DEC8A8127DAF1A60020DB73 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
 				2DEC8A8A27DB162F0020DB73 /* Childs */,
-				2DEC8A8827DB161C0020DB73 /* ToDoView.swift */,
-				2DC9809B27DB3C1800D3BFDB /* AddNewToDoView.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -226,8 +198,10 @@
 				2DEC8A8227DAF1EC0020DB73 /* ToDoHeader.swift */,
 				2DEC8A8427DAF66D0020DB73 /* ToDoCards.swift */,
 				2DEC8A8627DB0A410020DB73 /* ToDoItem.swift */,
-				2DC9809727DB36CC00D3BFDB /* AddToDoButton.swift */,
 				2DC9809D27DB522000D3BFDB /* MenuSelector.swift */,
+				2DCD3BCE27DBB9AF00A12410 /* DatePickers.swift */,
+				2DCD3BD527DBF0FC00A12410 /* TimePickers.swift */,
+				2DCD3BD327DBC5B000A12410 /* PickAnyEmoji.swift */,
 			);
 			path = Childs;
 			sourceTree = "<group>";
@@ -250,6 +224,8 @@
 			name = Calendar;
 			packageProductDependencies = (
 				2DC980A027DB656000D3BFDB /* PickEmoji */,
+				2DCD3BD127DBC34700A12410 /* HalfModal */,
+				2DE3524927DC81F7007A884F /* CoreStore */,
 			);
 			productName = Calendar;
 			productReference = 2DC7CFE127D53A1C00BF4802 /* Calendar.app */;
@@ -281,6 +257,8 @@
 			mainGroup = 2DC7CFD827D53A1B00BF4802;
 			packageReferences = (
 				2DC9809F27DB656000D3BFDB /* XCRemoteSwiftPackageReference "PickEmoji" */,
+				2DCD3BD027DBC34700A12410 /* XCRemoteSwiftPackageReference "HalfModal" */,
+				2DE3524827DC81F7007A884F /* XCRemoteSwiftPackageReference "CoreStore" */,
 			);
 			productRefGroup = 2DC7CFE227D53A1C00BF4802 /* Products */;
 			projectDirPath = "";
@@ -308,22 +286,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DEC8A7B27DAE2EC0020DB73 /* RegistrationTextFields.swift in Sources */,
-				2DC9809827DB36CC00D3BFDB /* AddToDoButton.swift in Sources */,
-				2DEC8A7227DABEB40020DB73 /* LoginButtons.swift in Sources */,
+				2DCD3BD627DBF0FC00A12410 /* TimePickers.swift in Sources */,
+				2DC9809827DB36CC00D3BFDB /* LinearStyle.swift in Sources */,
 				2DEC8A6827DAA6440020DB73 /* ValidationMessage.swift in Sources */,
 				2DEC8A8727DB0A410020DB73 /* ToDoItem.swift in Sources */,
-				2DEC8A6D27DABA020020DB73 /* LoginHeader.swift in Sources */,
+				2DEC8A6D27DABA020020DB73 /* CustomHeader.swift in Sources */,
 				2DEC8A8927DB161C0020DB73 /* ToDoView.swift in Sources */,
 				2DC7D01027D5769400BF4802 /* DismissingKeyboard.swift in Sources */,
-				2DC7D00527D550D000BF4802 /* CustomTextField.swift in Sources */,
 				2DC7D00A27D56C7A00BF4802 /* Validator.swift in Sources */,
 				2DC9809E27DB522000D3BFDB /* MenuSelector.swift in Sources */,
-				2DEC8A6F27DABAD80020DB73 /* LoginTextFields.swift in Sources */,
+				2DD5DDB127DC0FE600A0D27C /* UserController.swift in Sources */,
 				2DEC8A8527DAF66D0020DB73 /* ToDoCards.swift in Sources */,
 				2DEC8A7927DACE8F0020DB73 /* Member.swift in Sources */,
-				2DEC8A7627DAC7970020DB73 /* RegistrationHeader.swift in Sources */,
-				2DEC8A6A27DAA8A80020DB73 /* TogglePassword.swift in Sources */,
+				2DCD3BD427DBC5B000A12410 /* PickAnyEmoji.swift in Sources */,
+				2DCD3BCF27DBB9AF00A12410 /* DatePickers.swift in Sources */,
 				2DC7CFF927D53B1500BF4802 /* CoreDataService.swift in Sources */,
 				2DC7CFFC27D53CE700BF4802 /* LaunchView.swift in Sources */,
 				2DEC8A7F27DAE85D0020DB73 /* RegistrationView.swift in Sources */,
@@ -547,6 +523,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		2DCD3BD027DBC34700A12410 /* XCRemoteSwiftPackageReference "HalfModal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ViktorMaric/HalfModal.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		2DE3524827DC81F7007A884F /* XCRemoteSwiftPackageReference "CoreStore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnEstropia/CoreStore.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -554,6 +546,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2DC9809F27DB656000D3BFDB /* XCRemoteSwiftPackageReference "PickEmoji" */;
 			productName = PickEmoji;
+		};
+		2DCD3BD127DBC34700A12410 /* HalfModal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DCD3BD027DBC34700A12410 /* XCRemoteSwiftPackageReference "HalfModal" */;
+			productName = HalfModal;
+		};
+		2DE3524927DC81F7007A884F /* CoreStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DE3524827DC81F7007A884F /* XCRemoteSwiftPackageReference "CoreStore" */;
+			productName = CoreStore;
 		};
 /* End XCSwiftPackageProductDependency section */
 

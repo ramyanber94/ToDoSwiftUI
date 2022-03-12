@@ -8,8 +8,11 @@
 import Foundation
 
 struct ToDo {
-    var section: [String: TaskWithStatus]?
+    var member: [TaskWithStatus]?
 }
 struct TaskWithStatus{
-    var task: [String: String]?
+    var task: String?
+    var status: String?
+    var date: Date?
+    var section: String?
 }

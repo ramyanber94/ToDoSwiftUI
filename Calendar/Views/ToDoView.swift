@@ -28,9 +28,15 @@ struct ToDoView: View {
                     }
                 }
             }
-            AddToDoButton(sf: sf) {
+            Button {
                 isAddTask.toggle()
+            } label: {
+                Text("+").foregroundColor(.white)
             }
+//            }.modifier(LinearStyle(roundedCornes: <#T##CGFloat?#>, startColor: <#T##Color?#>, endColor: <#T##Color?#>, textColor: <#T##Color?#>, lineWidth: <#T##Double?#>, shadowRadius: <#T##Double?#>, fontSize: <#T##CGFloat?#>, color: <#T##String?#>, text: <#T##String?#>))
+                .frame(maxWidth: sf.w * 0.2, alignment: .leading)
+                    .padding()
+
         }.fullScreenCover(isPresented: $isAddTask) {
             
         }

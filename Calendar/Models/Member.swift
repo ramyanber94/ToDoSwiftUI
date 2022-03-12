@@ -8,6 +8,8 @@
 import Foundation
 
 struct Member {
-    var credintials: [String : String]?
-    var todo: ToDo?
+    var email: String?
+    var password : String?
+    var name : String?
+    var todo: [ToDo]?
 }

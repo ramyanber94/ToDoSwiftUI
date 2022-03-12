@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ValidationMessage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-
+        Rectangle()
+            .frame(width: 200, height : 160)
+            .background(Color.white)
+            .overlay {
+            VStack{
+                Text("Rajnjsad")
+            }
+        }
     }
 }
 
-struct ValidationMessage_Previews: PreviewProvider {
-    static var previews: some View {
-        ValidationMessage()
-    }
-}

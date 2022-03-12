@@ -9,53 +9,81 @@ import Foundation
 import CoreData
 
 class CoreDataService : ObservableObject {
-    @Published var member = Member()
     
-    func addUser(email: String, name : String, password : String){
+    public static var shared = CoreDataService()
+    
+    func addUser(email: String, name : String, password : String) -> Bool{
         let user = User(context: persistentContainer.viewContext)
         user.name = name
         user.email = email
         user.password = password
         saveContext()
+        return true
     }
     
-    func getUser(email: String , password: String)-> Bool{
+    
+    
+    func getUser(email: String , password: String)-> Member?{
         let fetch : NSFetchRequest<User> = User.fetchRequest()
         fetch.predicate = NSPredicate(format: "(email == %@) AND (password == %@)", argumentArray: [email , password])
+        var member = Member()
         do{
             let result = try persistentContainer.viewContext.fetch(fetch) as [User]?
             if result?.count == 0 {
-                member.credintials?["email"] = result?[0].email
-                member.credintials?["name"] = result?[0].name
-                member.credintials?["password"] = result?[0].password
-                if let todos = result?[0].todo{
-                    var tasks = TaskWithStatus()
-                    for case let t as Todo in todos  {
-                        tasks.task![t.task!] = t.status
-                        member.todo?.section![t.section!] = tasks
+                return nil
+            }else{
+                if let emails = result?[0].email{
+                    if let passwords = result?[0].password{
+                        member.email = emails
+                        member.name = result?[0].name
+                        member.password = passwords
+                        if let todos = result?[0].todo{
+                            var tasks = TaskWithStatus()
+                            for case let t as Todo in todos  {
+                                tasks.task = t.task
+                                tasks.status = t.status
+                                tasks.date = t.date
+                                tasks.section = t.section
+                                var todosList = ToDo()
+                                todosList.member?.append(tasks)
+                                member.todo?.append(todosList)
+                            }
+                        }
+                        return member
                     }
                 }
-                return true
+                return member
+            }
+            
+        }catch{}
+        do{
+            let result = try persistentContainer.viewContext.fetch(fetch) as [User]?
+            if result?.count == 0 {
+               
             }else{
-                return false
+                return nil
             }
         }catch{}
-        return false
+        return nil
     }
-    
-    func addToDo(section: String, task : String, status : String, email: String, password: String){
+
+    func addToDo(section: String, task : String, status : String, email: String, password: String, date: Date)-> Bool{
         let todo = Todo(context: persistentContainer.viewContext)
         todo.task = task
         todo.status = status
         todo.section = section
+        todo.date = date
         let fetch : NSFetchRequest<User> = User.fetchRequest()
         fetch.predicate = NSPredicate(format: "(email == %@) AND (password == %@)", argumentArray: [email , password])
         do{
             let result = try persistentContainer.viewContext.fetch(fetch) as [User]?
             if result?.count == 0 {
                 result?[0].addToTodo(todo)
+                print("saved")
+                return true
             }
         }catch{}
+        return false
     }
     
     lazy var persistentContainer: NSPersistentContainer = {
