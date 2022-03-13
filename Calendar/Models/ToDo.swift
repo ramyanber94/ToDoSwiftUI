@@ -6,13 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct ToDo {
-    var member: [TaskWithStatus]?
-}
-struct TaskWithStatus{
+struct ToDo : Identifiable {
+    let id = UUID()
     var task: String?
     var status: String?
     var date: Date?
     var section: String?
+    var color: String?
 }

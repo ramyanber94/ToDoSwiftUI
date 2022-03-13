@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0E7CCC27DD2B4900EDD1B4 /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E7CCB27DD2B4900EDD1B4 /* CustomList.swift */; };
+		2D0E7CDD27DD7B0800EDD1B4 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E7CD927DD7B0800EDD1B4 /* Todo+CoreDataClass.swift */; };
+		2D0E7CDE27DD7B0800EDD1B4 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E7CDA27DD7B0800EDD1B4 /* Todo+CoreDataProperties.swift */; };
+		2D0E7CDF27DD7B0800EDD1B4 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E7CDB27DD7B0800EDD1B4 /* User+CoreDataClass.swift */; };
+		2D0E7CE027DD7B0800EDD1B4 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E7CDC27DD7B0800EDD1B4 /* User+CoreDataProperties.swift */; };
 		2DC7CFE527D53A1C00BF4802 /* CalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7CFE427D53A1C00BF4802 /* CalendarApp.swift */; };
 		2DC7CFE927D53A1D00BF4802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7CFE827D53A1D00BF4802 /* Assets.xcassets */; };
 		2DC7CFEC27D53A1D00BF4802 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7CFEB27D53A1D00BF4802 /* Preview Assets.xcassets */; };
@@ -21,25 +26,29 @@
 		2DC9809827DB36CC00D3BFDB /* LinearStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9809727DB36CC00D3BFDB /* LinearStyle.swift */; };
 		2DC9809A27DB394A00D3BFDB /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9809927DB394A00D3BFDB /* ToDo.swift */; };
 		2DC9809C27DB3C1800D3BFDB /* AddNewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9809B27DB3C1800D3BFDB /* AddNewToDoView.swift */; };
-		2DC9809E27DB522000D3BFDB /* MenuSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9809D27DB522000D3BFDB /* MenuSelector.swift */; };
+		2DC9809E27DB522000D3BFDB /* DropDownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9809D27DB522000D3BFDB /* DropDownSelector.swift */; };
 		2DC980A127DB656000D3BFDB /* PickEmoji in Frameworks */ = {isa = PBXBuildFile; productRef = 2DC980A027DB656000D3BFDB /* PickEmoji */; };
 		2DCD3BCF27DBB9AF00A12410 /* DatePickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD3BCE27DBB9AF00A12410 /* DatePickers.swift */; };
 		2DCD3BD227DBC34700A12410 /* HalfModal in Frameworks */ = {isa = PBXBuildFile; productRef = 2DCD3BD127DBC34700A12410 /* HalfModal */; };
-		2DCD3BD427DBC5B000A12410 /* PickAnyEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD3BD327DBC5B000A12410 /* PickAnyEmoji.swift */; };
+		2DCD3BD427DBC5B000A12410 /* PickAnyEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD3BD327DBC5B000A12410 /* PickAnyEmojiView.swift */; };
 		2DCD3BD627DBF0FC00A12410 /* TimePickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD3BD527DBF0FC00A12410 /* TimePickers.swift */; };
 		2DD5DDB127DC0FE600A0D27C /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD5DDB027DC0FE600A0D27C /* UserController.swift */; };
-		2DE3524A27DC81F7007A884F /* CoreStore in Frameworks */ = {isa = PBXBuildFile; productRef = 2DE3524927DC81F7007A884F /* CoreStore */; };
 		2DEC8A6827DAA6440020DB73 /* ValidationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A6727DAA6440020DB73 /* ValidationMessage.swift */; };
 		2DEC8A6D27DABA020020DB73 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A6C27DABA020020DB73 /* CustomHeader.swift */; };
 		2DEC8A7927DACE8F0020DB73 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A7827DACE8F0020DB73 /* Member.swift */; };
 		2DEC8A7F27DAE85D0020DB73 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A7E27DAE85D0020DB73 /* RegistrationView.swift */; };
 		2DEC8A8327DAF1EC0020DB73 /* ToDoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A8227DAF1EC0020DB73 /* ToDoHeader.swift */; };
-		2DEC8A8527DAF66D0020DB73 /* ToDoCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A8427DAF66D0020DB73 /* ToDoCards.swift */; };
+		2DEC8A8527DAF66D0020DB73 /* CustomCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A8427DAF66D0020DB73 /* CustomCards.swift */; };
 		2DEC8A8727DB0A410020DB73 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A8627DB0A410020DB73 /* ToDoItem.swift */; };
 		2DEC8A8927DB161C0020DB73 /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC8A8827DB161C0020DB73 /* ToDoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D0E7CCB27DD2B4900EDD1B4 /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
+		2D0E7CD927DD7B0800EDD1B4 /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Todo+CoreDataClass.swift"; path = "Calendar/Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2D0E7CDA27DD7B0800EDD1B4 /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Todo+CoreDataProperties.swift"; path = "Calendar/Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D0E7CDB27DD7B0800EDD1B4 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Calendar/User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2D0E7CDC27DD7B0800EDD1B4 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Calendar/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2DC7CFE127D53A1C00BF4802 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC7CFE427D53A1C00BF4802 /* CalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarApp.swift; sourceTree = "<group>"; };
 		2DC7CFE827D53A1D00BF4802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,9 +64,9 @@
 		2DC9809727DB36CC00D3BFDB /* LinearStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearStyle.swift; sourceTree = "<group>"; };
 		2DC9809927DB394A00D3BFDB /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		2DC9809B27DB3C1800D3BFDB /* AddNewToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDoView.swift; sourceTree = "<group>"; };
-		2DC9809D27DB522000D3BFDB /* MenuSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelector.swift; sourceTree = "<group>"; };
+		2DC9809D27DB522000D3BFDB /* DropDownSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownSelector.swift; sourceTree = "<group>"; };
 		2DCD3BCE27DBB9AF00A12410 /* DatePickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickers.swift; sourceTree = "<group>"; };
-		2DCD3BD327DBC5B000A12410 /* PickAnyEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAnyEmoji.swift; sourceTree = "<group>"; };
+		2DCD3BD327DBC5B000A12410 /* PickAnyEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAnyEmojiView.swift; sourceTree = "<group>"; };
 		2DCD3BD527DBF0FC00A12410 /* TimePickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickers.swift; sourceTree = "<group>"; };
 		2DD5DDB027DC0FE600A0D27C /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		2DEC8A6727DAA6440020DB73 /* ValidationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationMessage.swift; sourceTree = "<group>"; };
@@ -65,7 +74,7 @@
 		2DEC8A7827DACE8F0020DB73 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		2DEC8A7E27DAE85D0020DB73 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		2DEC8A8227DAF1EC0020DB73 /* ToDoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoHeader.swift; sourceTree = "<group>"; };
-		2DEC8A8427DAF66D0020DB73 /* ToDoCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCards.swift; sourceTree = "<group>"; };
+		2DEC8A8427DAF66D0020DB73 /* CustomCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCards.swift; sourceTree = "<group>"; };
 		2DEC8A8627DB0A410020DB73 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		2DEC8A8827DB161C0020DB73 /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +85,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DC980A127DB656000D3BFDB /* PickEmoji in Frameworks */,
-				2DE3524A27DC81F7007A884F /* CoreStore in Frameworks */,
 				2DCD3BD227DBC34700A12410 /* HalfModal in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +95,10 @@
 		2DC7CFD827D53A1B00BF4802 = {
 			isa = PBXGroup;
 			children = (
+				2D0E7CD927DD7B0800EDD1B4 /* Todo+CoreDataClass.swift */,
+				2D0E7CDA27DD7B0800EDD1B4 /* Todo+CoreDataProperties.swift */,
+				2D0E7CDB27DD7B0800EDD1B4 /* User+CoreDataClass.swift */,
+				2D0E7CDC27DD7B0800EDD1B4 /* User+CoreDataProperties.swift */,
 				2DC7CFE327D53A1C00BF4802 /* Calendar */,
 				2DC7CFE227D53A1C00BF4802 /* Products */,
 			);
@@ -140,6 +152,7 @@
 				2DC7CFFB27D53CE700BF4802 /* LaunchView.swift */,
 				2DEC8A8827DB161C0020DB73 /* ToDoView.swift */,
 				2DC9809B27DB3C1800D3BFDB /* AddNewToDoView.swift */,
+				2DCD3BD327DBC5B000A12410 /* PickAnyEmojiView.swift */,
 				2DEC8A8127DAF1A60020DB73 /* ToDo */,
 				2DC7D00327D5509A00BF4802 /* Components */,
 			);
@@ -160,10 +173,15 @@
 		2DC7D00327D5509A00BF4802 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2DC9809D27DB522000D3BFDB /* DropDownSelector.swift */,
+				2DEC8A8427DAF66D0020DB73 /* CustomCards.swift */,
+				2DCD3BCE27DBB9AF00A12410 /* DatePickers.swift */,
+				2DCD3BD527DBF0FC00A12410 /* TimePickers.swift */,
 				2DC7D00627D5674700BF4802 /* CustomButton.swift */,
 				2DC9809727DB36CC00D3BFDB /* LinearStyle.swift */,
 				2DEC8A6C27DABA020020DB73 /* CustomHeader.swift */,
 				2DEC8A6727DAA6440020DB73 /* ValidationMessage.swift */,
+				2D0E7CCB27DD2B4900EDD1B4 /* CustomList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -196,12 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				2DEC8A8227DAF1EC0020DB73 /* ToDoHeader.swift */,
-				2DEC8A8427DAF66D0020DB73 /* ToDoCards.swift */,
 				2DEC8A8627DB0A410020DB73 /* ToDoItem.swift */,
-				2DC9809D27DB522000D3BFDB /* MenuSelector.swift */,
-				2DCD3BCE27DBB9AF00A12410 /* DatePickers.swift */,
-				2DCD3BD527DBF0FC00A12410 /* TimePickers.swift */,
-				2DCD3BD327DBC5B000A12410 /* PickAnyEmoji.swift */,
 			);
 			path = Childs;
 			sourceTree = "<group>";
@@ -225,7 +238,6 @@
 			packageProductDependencies = (
 				2DC980A027DB656000D3BFDB /* PickEmoji */,
 				2DCD3BD127DBC34700A12410 /* HalfModal */,
-				2DE3524927DC81F7007A884F /* CoreStore */,
 			);
 			productName = Calendar;
 			productReference = 2DC7CFE127D53A1C00BF4802 /* Calendar.app */;
@@ -258,7 +270,6 @@
 			packageReferences = (
 				2DC9809F27DB656000D3BFDB /* XCRemoteSwiftPackageReference "PickEmoji" */,
 				2DCD3BD027DBC34700A12410 /* XCRemoteSwiftPackageReference "HalfModal" */,
-				2DE3524827DC81F7007A884F /* XCRemoteSwiftPackageReference "CoreStore" */,
 			);
 			productRefGroup = 2DC7CFE227D53A1C00BF4802 /* Products */;
 			projectDirPath = "";
@@ -292,15 +303,20 @@
 				2DEC8A8727DB0A410020DB73 /* ToDoItem.swift in Sources */,
 				2DEC8A6D27DABA020020DB73 /* CustomHeader.swift in Sources */,
 				2DEC8A8927DB161C0020DB73 /* ToDoView.swift in Sources */,
+				2D0E7CCC27DD2B4900EDD1B4 /* CustomList.swift in Sources */,
 				2DC7D01027D5769400BF4802 /* DismissingKeyboard.swift in Sources */,
+				2D0E7CE027DD7B0800EDD1B4 /* User+CoreDataProperties.swift in Sources */,
+				2D0E7CDF27DD7B0800EDD1B4 /* User+CoreDataClass.swift in Sources */,
 				2DC7D00A27D56C7A00BF4802 /* Validator.swift in Sources */,
-				2DC9809E27DB522000D3BFDB /* MenuSelector.swift in Sources */,
+				2DC9809E27DB522000D3BFDB /* DropDownSelector.swift in Sources */,
 				2DD5DDB127DC0FE600A0D27C /* UserController.swift in Sources */,
-				2DEC8A8527DAF66D0020DB73 /* ToDoCards.swift in Sources */,
+				2DEC8A8527DAF66D0020DB73 /* CustomCards.swift in Sources */,
 				2DEC8A7927DACE8F0020DB73 /* Member.swift in Sources */,
-				2DCD3BD427DBC5B000A12410 /* PickAnyEmoji.swift in Sources */,
+				2DCD3BD427DBC5B000A12410 /* PickAnyEmojiView.swift in Sources */,
+				2D0E7CDD27DD7B0800EDD1B4 /* Todo+CoreDataClass.swift in Sources */,
 				2DCD3BCF27DBB9AF00A12410 /* DatePickers.swift in Sources */,
 				2DC7CFF927D53B1500BF4802 /* CoreDataService.swift in Sources */,
+				2D0E7CDE27DD7B0800EDD1B4 /* Todo+CoreDataProperties.swift in Sources */,
 				2DC7CFFC27D53CE700BF4802 /* LaunchView.swift in Sources */,
 				2DEC8A7F27DAE85D0020DB73 /* RegistrationView.swift in Sources */,
 				2DC7CFE527D53A1C00BF4802 /* CalendarApp.swift in Sources */,
@@ -531,14 +547,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		2DE3524827DC81F7007A884F /* XCRemoteSwiftPackageReference "CoreStore" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JohnEstropia/CoreStore.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -551,11 +559,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2DCD3BD027DBC34700A12410 /* XCRemoteSwiftPackageReference "HalfModal" */;
 			productName = HalfModal;
-		};
-		2DE3524927DC81F7007A884F /* CoreStore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2DE3524827DC81F7007A884F /* XCRemoteSwiftPackageReference "CoreStore" */;
-			productName = CoreStore;
 		};
 /* End XCSwiftPackageProductDependency section */
 

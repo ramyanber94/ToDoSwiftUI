@@ -19,13 +19,14 @@ struct LinearStyle: ViewModifier {
 
     func body(content: Content) -> some View {
         content
+            .padding()
             .background(LinearGradient(gradient: Gradient(colors: [startColor ?? Color.white, endColor ?? Color.black]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .cornerRadius(roundedCornes ?? 0)
-            .padding(padding ?? 0)
+            .padding(padding ?? 3)
             .foregroundColor(textColor)
             .overlay(RoundedRectangle(cornerRadius: roundedCornes ?? 0)
                         .stroke(LinearGradient(gradient: Gradient(colors: [startColor ?? Color.white, endColor ?? Color.black]), startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: lineWidth ?? 2.5))
-            .font(.custom("Open Sans", size: fontSize ?? 0))
-            .shadow(radius: shadowRadius ?? 0)
+            .font(.custom("Open Sans", size: fontSize ?? 20))
+            .shadow(radius: shadowRadius ?? 10)
     }
 }

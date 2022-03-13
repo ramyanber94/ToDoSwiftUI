@@ -9,7 +9,7 @@ import Foundation
 
 struct Member {
     var email: String?
-    var password : String?
-    var name : String?
-    var todo: [ToDo]?
+    var password: String?
+    var name: String?
+    var todos = [ToDo]()
 }

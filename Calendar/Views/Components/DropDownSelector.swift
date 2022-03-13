@@ -7,9 +7,16 @@
 
 import SwiftUI
 
-struct MenuSelector: View {
-    var text : Binding<String>?
-    let sf = ScaleFactor()
+struct DropDownSelector: View {
+    
+    var text: Binding<String>?
+    var textSize: CGFloat?
+    var circleStartCol: Color?
+    var circleEndCol: Color?
+    var circleWidth: CGFloat?
+    var circleHeight: CGFloat?
+    var frameStartCol: Color?
+    var frameEndCol: Color?
     
     var body: some View {
         Menu {
@@ -30,23 +37,17 @@ struct MenuSelector: View {
              }
         }label: {
             Circle().fill(
-                LinearGradient(gradient: Gradient(colors: [Color("workStart"), Color("workEnd")]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                ).frame(width: sf.w * 0.06, height: sf.h * 0.04)
+                LinearGradient(gradient: Gradient(colors: [circleStartCol ?? Color("workStart"),circleEndCol ?? Color("workEnd")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                ).frame(width: circleWidth ?? 20, height: circleHeight ?? 20)
                 .shadow(color: Color.gray, radius: 1, x: 1, y: 1)
                 .padding(5)
             Text(text?.wrappedValue ?? "Work")
-                .font(.system(size: 20))
+                .font(.system(size: textSize ?? 20))
                 .bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(8)
              Image(systemName: "arrowtriangle.forward.fill")
-        }.modifier(LinearStyle(roundedCornes: 6, startColor: Color("AccentColor"), endColor: Color("textfield-end"), textColor: .white))
-//            .frame(width: sf.w * 1, height: sf.h * 0.1)
+        }.modifier(LinearStyle(roundedCornes: 10, startColor: frameStartCol ?? Color("AccentColor"), endColor: frameEndCol ?? Color("textfield-end"), textColor: .white))
     }
 }
 
-struct MenuSelector_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuSelector()
-    }
-}
