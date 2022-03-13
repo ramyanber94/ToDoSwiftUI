@@ -12,13 +12,17 @@ class CoreDataService : ObservableObject {
     
     public static var shared = CoreDataService()
     
-    func addUser(email: String, name : String, password : String) -> Bool{
+    func addUser(email: String, name : String, password : String) -> Member?{
         let user = User(context: persistentContainer.viewContext)
         user.name = name
         user.email = email
         user.password = password
         saveContext()
-        return true
+        var member = Member()
+        member.email = email
+        member.password = password
+        member.name = name
+        return member
     }
 
     func getUser(email: String , password: String)-> Member?{
@@ -36,12 +40,8 @@ class CoreDataService : ObservableObject {
                         member.name = result?[0].name
                         member.password = passwords
                         if let todos = result?[0].todo{
-                            var tasks = ToDo()
                             for case let t as Todo in todos  {
-                                tasks.task = t.task
-                                tasks.status = t.status
-                                tasks.date = t.date
-                                tasks.section = t.section
+                                let tasks = ToDo(task: t.task!, status: t.status!, date: t.date!, section: t.section!, notes: t.note ?? "", color: [t.color1 ?? "", t.color2 ?? ""])
                                 member.todos.append(tasks)
                             }
                             return member
@@ -60,26 +60,29 @@ class CoreDataService : ObservableObject {
         return nil
     }
 
-    func addToDo(section: String, task : String, status : String, email: String, date: Date)-> Bool{
+    func addToDo(section: String, task : String, status : String, email: String, date: Date, note: String , color1: String, color2: String)-> Todo?{
         let todo = Todo(context: persistentContainer.viewContext)
         todo.task = task
         todo.status = status
         todo.section = section
         todo.date = date
+        todo.note = note
+        todo.color1 = color1
+        todo.color2 = color2
         let fetch : NSFetchRequest<User> = User.fetchRequest()
         fetch.predicate = NSPredicate(format: "(email == %@)", argumentArray: [email])
         do{
             let result = try persistentContainer.viewContext.fetch(fetch) as [User]?
             if result?.count == 0 {
-                return false
+                return nil
             }else{
                 result?[0].addToTodo(todo)
                 saveContext()
                 print("saved")
-                return true
+                return todo
             }
         }catch{}
-        return false
+        return nil
     }
     
     lazy var persistentContainer: NSPersistentContainer = {

@@ -16,6 +16,7 @@ struct RegistrationView: View {
     @State var isPasswordShow = false
     @State var name = ""
     @State var isTodo = false
+    @State var alertShow = false
     let sf = ScaleFactor()
     
     var body: some View {
@@ -39,18 +40,31 @@ struct RegistrationView: View {
                         TextField("Name", text: $name).modifier(LinearStyle(roundedCornes: 10, startColor: Color("textfield-end"), endColor: Color("button"), textColor: Color.white)).frame(width: sf.w * 0.85, height: sf.h * 0.05)
                             .position(x: sf.w * 0.5, y: sf.h * 0.05)
                         TextField("E-mail", text: $email).modifier(LinearStyle(roundedCornes: 10, startColor: Color("textfield-end"), endColor: Color("button"), textColor: Color.white)).frame(width: sf.w * 0.85, height: sf.h * 0.05)
-                            .position(x: sf.w * 0.5, y: sf.h * 0.05)
-                        TextField("Password", text: $password).modifier(LinearStyle(roundedCornes: 10, startColor: Color("textfield-end"), endColor: Color("button"), textColor: Color.white)).frame(width: sf.w * 0.85, height: sf.h * 0.05).position(x: sf.w * 0.5, y: sf.h * 0.05)
+                            .position(x: sf.w * 0.5, y: sf.h * 0.05).autocapitalization(.none)
+                        TextField("Password", text: $password).modifier(LinearStyle(roundedCornes: 10, startColor: Color("textfield-end"), endColor: Color("button"), textColor: Color.white)).frame(width: sf.w * 0.85, height: sf.h * 0.05).position(x: sf.w * 0.5, y: sf.h * 0.05).autocapitalization(.none)
                         CustomButton(text: "Sign Up", fontSize: sf.w * 0.07, background: Color("workStart"), height: sf.h * 0.1, width: sf.w * 0.8, radius: sf.h * 0.04, x: sf.w * 0.5, y: sf.h * 0.05){
-                            let check = user.addUser(email: email, password: password, name: name)
-                            if check {
-                                isTodo.toggle()
+                            if name.isValid(.name){
+                                if email.isValid(.email){
+                                    let check = user.addUser(email: email, password: password, name: name)
+                                    if check {
+                                        isTodo.toggle()
+                                    }else{
+                                        alertShow.toggle()
+                                    }
+                                }else{
+                                    alertShow.toggle()
+                                }
                             }else{
-                                print("We can't")
+                                alertShow.toggle()
                             }
+                       
                         }
-                }
-            }
+                    }.fullScreenCover(isPresented: $isTodo) {
+                        MainView()
+                    }
+            }.alert(isPresented: $alertShow) {
+                return Alert(title: Text("Please enter correct credentials" as String))
+            } 
         }
 }
 

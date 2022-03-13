@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Todo" representedClassName="Todo" parentEntity="User" syncable="YES">
+        <attribute name="color1" optional="YES" attributeType="String"/>
+        <attribute name="color2" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
         <attribute name="section" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="String"/>
         <attribute name="task" optional="YES" attributeType="String"/>
@@ -14,7 +17,7 @@
         <relationship name="todo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Todo" inverseName="userTodos" inverseEntity="Todo"/>
     </entity>
     <elements>
-        <element name="Todo" positionX="-423" positionY="-126" width="128" height="104"/>
+        <element name="Todo" positionX="-423" positionY="-126" width="128" height="149"/>
         <element name="User" positionX="-436.03125" positionY="-162.017578125" width="128" height="89"/>
     </elements>
 </model>

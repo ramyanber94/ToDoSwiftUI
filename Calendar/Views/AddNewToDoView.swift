@@ -22,8 +22,7 @@ struct AddNewToDoView: View {
     @State var isDate = false
     @State var isTime = false
     @State var dropdownText = "Work"
-    @State var dropDownCircleColStart = Color("workStart")
-    @State var dropDownCircleColEnd = Color("workEnd")
+    @State var alertShow = false
     let sf = ScaleFactor()
     
     var body: some View {
@@ -42,41 +41,27 @@ struct AddNewToDoView: View {
                                 .position(x: sf.w * 0.5, y: sf.h * 0.04)
                         }
                         Section(header: Text("Category").foregroundColor(Color.white).font(.system(size: sf.w * 0.03).bold()).frame(maxWidth: .infinity, alignment: .leading).padding(sf.h * 0.02)) {
-                            DropDownSelector(text: $dropdownText, textSize: sf.w * 0.05, circleStartCol: setCircleCol()[0], circleEndCol: setCircleCol()[1], circleWidth: sf.w * 0.09, circleHeight: sf.h * 0.04, frameStartCol: Color("textfield-end"), frameEndCol: Color("button")).frame(width: sf.w * 0.8, height: sf.h * 0.07)
+                            if dropdownText == "Urgent"{
+                                DropDownSelector(text: $dropdownText, textSize: sf.w * 0.05, circleStartCol: Color("urgentStart"), circleEndCol: Color("urgentEnd"), circleWidth: sf.w * 0.09, circleHeight: sf.h * 0.04, frameStartCol: Color("textfield-end"), frameEndCol: Color("button")).frame(width: sf.w * 0.8, height: sf.h * 0.07)
+                            }
+                            else if dropdownText == "Family"{
+                                DropDownSelector(text: $dropdownText, textSize: sf.w * 0.05, circleStartCol: Color("familyEnd"), circleEndCol: Color("familyStart"), circleWidth: sf.w * 0.09, circleHeight: sf.h * 0.04, frameStartCol: Color("textfield-end"), frameEndCol: Color("button")).frame(width: sf.w * 0.8, height: sf.h * 0.07)
+                            }
+                            else {
+                                DropDownSelector(text: $dropdownText, textSize: sf.w * 0.05, circleStartCol: Color("workStart"), circleEndCol: Color("workEnd"), circleWidth: sf.w * 0.09, circleHeight: sf.h * 0.04, frameStartCol: Color("textfield-end"), frameEndCol: Color("button")).frame(width: sf.w * 0.8, height: sf.h * 0.07)
+                            }
+                           
                         }
                         Section(header: Text("Date And Time").foregroundColor(Color.white).font(.system(size: sf.w * 0.03).bold()).frame(maxWidth: .infinity, alignment: .leading).padding(sf.h * 0.02)) {
-                            HStack{
-                                Button {
-                                    isDate.toggle()
-                                } label: {
-                                    HStack{
-                                        Image(systemName: "calendar")
-                                            .foregroundColor(Color.white)
-                                            .padding()
-                                        Text("Select Date").foregroundColor(Color.white)
-                                            .font(.system(size:  sf.w * 0.035))
-                                            .padding()
-                                    }.background(Color("AddSmily"))
-                                        .cornerRadius(10)
-                                }
-                                Button {
-                                    isTime.toggle()
-                                } label: {
-                                    HStack{
-                                        Image(systemName: "calendar")
-                                            .foregroundColor(Color.white)
-                                            .padding()
-                                        Text("Select Time").foregroundColor(Color.white)
-                                            .font(.system(size: sf.w * 0.035))
-                                            .padding()
-                                    }.background(Color("AddSmily"))
-                                        .cornerRadius(10)
-                                }
-                            }
-                             
-                        }
+                                DatePicker("", selection: $date, displayedComponents: .date).frame(width: sf.w * 0.22, height: sf.h * 0, alignment: .center)
+                                    .datePickerStyle(CompactDatePickerStyle())
+                                    .modifier(LinearStyle(roundedCornes: 10, startColor: Color("textfield-end"), endColor: Color("button"), textColor: Color.white))
+                                DatePicker("", selection: $date, displayedComponents: .hourAndMinute).frame(width: sf.w * 0.17, height: sf.h * 0, alignment: .center)
+                                    .modifier(LinearStyle(roundedCornes: 10, startColor: Color("textfield-end"), endColor: Color("button"), textColor: Color.white))
+                                    .datePickerStyle(CompactDatePickerStyle())
+                        }.frame(width: sf.w * 1, height: sf.h * 0.04, alignment: .center)
                         Section(header: Text("Note").foregroundColor(Color.white).font(.system(size: sf.w * 0.03).bold()).frame(maxWidth: .infinity, alignment: .leading).padding(sf.h * 0.03)) {
-                            TextEditor(text: $notes)
+                            TextEditor(text: $notes).background(Color.white)
                                 .foregroundColor(self.notes == "Put your notes here" ? .gray : .white)
                                 .modifier(LinearStyle(roundedCornes: 20, startColor: Color("AccentColor"), endColor: Color("textfield-end"), textColor: Color.white, fontSize: 12))
                                 .frame(width: sf.w * 1, height: sf.h * 0.15, alignment: .center)
@@ -110,26 +95,38 @@ struct AddNewToDoView: View {
                                 .position(x: sf.w * 0.5, y: sf.h * 0.02)
                         }.position(x: sf.w * 0.5, y: sf.h * 0.02)
                         CustomButton(text: "Create Reminder", fontSize: sf.w * 0.05, hTextPadding: 20, background: Color("button"), height: sf.h * 0.07, width: sf.w * 0.8, radius: 50, x: sf.w * 0.5, y: sf.h * 0.03) {
-                            let check = user.addTodo(section: section , taskList: reminderText, status: "S", date: date, email: user.member.email!)
-                            if check {
-                                print("success")
+                            if notes == "Urgent"{
+                                let check = user.addTodo(section: section , taskList: reminderText, status: "S", date: date, email: user.member.email!, notes: notes, color: ["urgentStart", "urgentEnd"])
+                                if check {
+                                    alertShow = true
+                                }
+                                print(user.member)
                             }
-                            print(user.member)
+                            else if notes == "Family"{
+                                let check = user.addTodo(section: section , taskList: reminderText, status: "S", date: date, email: user.member.email!, notes: notes, color: ["familyStart", "familyEnd"])
+                                if check {
+                                    alertShow = true
+                                }
+                                print(user.member)
+                            }
+                            else {
+                                let check = user.addTodo(section: section , taskList: reminderText, status: "S", date: date, email: user.member.email!, notes: notes, color: ["workStart", "workEnd"])
+                                if check {
+                                    alertShow = true
+                                }
+                                print(user.member)
+                            }
                         }
                     }.onTapGesture {
                         self.endEditing()
                     }.ignoresSafeArea(.keyboard)
                         .frame(minHeight: sf.h * 0.4, alignment: .topLeading)
            
+                }.alert(isPresented: $alertShow) {
+                    return Alert(title: Text("Success" as String))
                 }
                 if isPickEmoji {
                     HalfModalView(content: AnyView(PickAnyEmoji()) , header: AnyView(Text("Pick your emoji")), isPresented: $isPickEmoji)
-                }
-                if isDate {
-                    HalfModalView(content: AnyView(DatePickers(date: $date)) , header: AnyView(Text("Pick your emoji")), isPresented: $isDate)
-                }
-                if isTime {
-                    HalfModalView(content: AnyView(TimePickers(time: $time)) , header: AnyView(Text("Pick your emoji")), isPresented: $isTime)
                 }
      
             }.toolbar {
@@ -152,30 +149,6 @@ struct AddNewToDoView: View {
     }
     private func endEditing() {
           UIApplication.shared.endEditing()
-    }
-    private func setCircleCol()-> [Color] {
-        var colors = [Color]()
-        if notes == "Urgent"{
-            dropDownCircleColStart = Color("urgentStart")
-            dropDownCircleColEnd = Color("urgentEnd")
-            colors.append(dropDownCircleColStart)
-            colors.append(dropDownCircleColEnd)
-            return colors
-        }
-        else if notes == "Family"{
-            dropDownCircleColStart = Color("familyStart")
-            dropDownCircleColEnd = Color("familyEnd")
-            colors.append(dropDownCircleColStart)
-            colors.append(dropDownCircleColEnd)
-            return colors
-        }
-        else {
-            dropDownCircleColStart = Color("workStart")
-            dropDownCircleColEnd = Color("workEnd")
-            colors.append(dropDownCircleColStart)
-            colors.append(dropDownCircleColEnd)
-            return colors
-        }
     }
 }
 

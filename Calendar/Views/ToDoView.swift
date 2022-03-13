@@ -15,7 +15,8 @@ struct ToDoView: View {
     @State private var familyNumbers = ""
     @State private var urgentNumbers = ""
     @State private var isAddTask = false
-    
+    @State private var isFinished = false
+
     var body: some View {
         ZStack{
             Color("AccentColor").edgesIgnoringSafeArea(.all)
@@ -32,14 +33,46 @@ struct ToDoView: View {
                     List {
                         if let todos = user.member.todos {
                             ForEach(todos){ todo in
-                                CustomList(sectionFontSize: 20, sectionFontCol: Color.white, sectionBackgroundCol: Color.black, circleStartCol: Color.blue, circleEndCol: Color.yellow, circleHeigh: 20, circleWidth: 20, textCol: Color.white, textFontSize: 20, listBackGroundCol: Color.black, todos: todo).GenerateSection()
+                                HStack{
+                                        Button {
+                                            isFinished.toggle()
+                                        } label: {
+                                            
+                                            if isFinished {
+                                                ZStack{
+                                                       Circle()
+                                                           .fill(
+                                                            LinearGradient(gradient: Gradient(colors: [Color(todo.color[0]) , Color(todo.color[1]) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                                                           )
+                                                           .frame(width: sf.w * 0.1, height: sf.h * 0.05, alignment: .leading)
+                                                   }.overlay {
+                                                       Image(systemName: "checkmark").foregroundColor(Color.white)
+                                                }
+                                            }else {
+                                                Circle()
+                                                    .stroke(LinearGradient(colors: [Color(todo.color[0]) , Color(todo.color[0]) ], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 2.5)
+                                                    .frame(width: sf.w * 0.1, height: sf.h * 0.05, alignment: .leading)
+                                            }
+                                    
+                                        }
+                                    Text(todo.task).font(.custom("Gill Sans", fixedSize: sf.w * 0.06)).foregroundColor(.white) .strikethrough(isFinished)
+                                    
+                                }
                             }
                         }
+                    }.frame(width: sf.w * 1, height: sf.h * 1, alignment: .center)
+                    .onAppear() {
+                                   UITableView.appearance().backgroundColor = UIColor.clear
+                                   UITableViewCell.appearance().backgroundColor = UIColor.clear
+                               }
+                    .overlay {
+                        CustomButton(text: "+", fontSize: sf.w * 0.08, hTextPadding: 20, background: Color("button"), height: sf.h * 0.07, width: sf.w * 0.15, radius: 40, x: sf.w * 0.8, y: sf.h * 0.45) {
+                            isAddTask.toggle()
+                        }
                     }
+              
                 }
-                CustomButton(text: "+", fontSize: sf.w * 0.08, hTextPadding: 20, background: Color("button"), height: sf.h * 0.1, width: sf.w * 0.2, radius: 40, x: sf.w * 0.8, y: sf.h * 0.4) {
-                    isAddTask.toggle()
-                }
+              
             }
       
         }.fullScreenCover(isPresented: $isAddTask) {

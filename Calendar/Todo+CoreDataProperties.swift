@@ -20,6 +20,9 @@ extension Todo {
     @NSManaged public var section: String?
     @NSManaged public var status: String?
     @NSManaged public var task: String?
+    @NSManaged public var color1: String?
+    @NSManaged public var color2: String?
+    @NSManaged public var note: String?
     @NSManaged public var userTodos: User?
     
     public var unwrappedDate: Date {
@@ -33,6 +36,15 @@ extension Todo {
     }
     public var unwrappedTask: String {
         task ?? ""
+    }
+    public var unwrappedColor1: String {
+        color1 ?? ""
+    }
+    public var unwrappedColor2: String {
+        color2 ?? ""
+    }
+    public var unwrappedNote: String {
+        note ?? ""
     }
 
 }
